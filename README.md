@@ -1,6 +1,8 @@
-# Yet Another LateX Templates Repository
+# Yet Another LateX Template Repository
 
-Nice LaTeX templates for university students.
+Nice LaTeX templates for university students. I was studying at ENSSAT Lannion, so there is only my university logo now - but feel free to update the logos and whatever you need...
+
+Folders are usually organised with a `params.tex` file which loads libraries and tune parameters, a file `report.tex` which you will need to latexify in order to generate the pdf, and also sometimes a bunch of subfiles included in the main file, to make organisation even more clear.
 
 ![Report Style](report.png "Report")
 
