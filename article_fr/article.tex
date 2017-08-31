@@ -1,0 +1,57 @@
+\documentclass[12pt, openany]{article}
+\input{./params/params.tex}
+
+\newcommand{\quelrapport}{Projet noté}
+\newcommand{\titre}{\huge \bfseries Sujet général}
+\newcommand{\matiere}{Matière \& Autre Matière}
+\newcommand{\dest}{Destinataire : \href{mailto:some.people@some-address.fr}{Claude CONVENANT}}
+\newcommand{\skipduhaut}{\\[7cm]}
+
+\begin{document}
+
+\input{./title.tex}
+
+\newpage
+\tableofcontents
+%\newpage
+
+\section{Introduction}
+
+Superbe introduction.
+\lipsum[1-2]
+
+\section{Ma première section}
+
+\begin{figure}[!h]
+  \centering
+  %\fbox{
+  \includegraphics[scale=1]{images/eximages.png}
+  %}
+  \caption{Une image légendée.}
+  \label{fig:eximage}
+\end{figure}
+
+\lipsum[2]
+
+\subsection{Ma première subsection}
+\lipsum[1]
+
+\subsection{Ma seconde subsection}
+\lipsum[1]
+
+\section{Ma dernière section}
+\lipsum[1]
+
+\section{Conclusion}
+
+Superbe conclusion.
+\lipsum[2]
+
+\newpage
+\listoffigures
+
+\nocite{*}%générer toute la biblio
+\bibliographystyle{alphadin}
+\bibliography{bibli}
+
+\end{document}

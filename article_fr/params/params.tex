@@ -1,0 +1,97 @@
+%%% PACKAGES
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage[francais]{babel}
+\usepackage{listings}%code format
+\usepackage[pdftex]{graphicx}
+\usepackage[pagestyles]{titlesec}
+\usepackage{fancyhdr}
+\usepackage{rotating}
+\usepackage[Lenny]{fncychap} %http://texblog.org/2012/07/03/fancy-latex-chapter-styles/
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{hyperref}        %links
+\usepackage[all]{hypcap}
+\usepackage{listings}        %code
+\usepackage{tocloft}
+% underline align
+\usepackage[normalem]{ulem}
+\usepackage[nottoc]{tocbibind}
+\usepackage{epigraph}        %citation
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+%%%PACKAGES
+
+\geometry{vmargin=2.5cm}
+
+\input{./params/colors.tex}
+
+\makeatletter
+\patchcmd{\@makechapterhead}{50\p@}{0pt}{}{}
+\patchcmd{\@makeschapterhead}{50\p@}{0pt}{}{}
+\makeatother
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Rapport},    % title
+    pdfauthor={Colin LEVERGER},     % author
+    pdfsubject={},   % subject of the document
+    pdfcreator={Colin LEVERGER},   % creator of the document
+    pdfproducer={Colin LEVERGER}, % producer of the document
+    pdfkeywords={Rapport}, % list of keywords
+    linktocpage,
+    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=mygreen,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+%\renewcommand\cftchapafterpnum{\vskip10pt}
+%\renewcommand\cftsecafterpnum{\vskip10pt}
+
+%\titleformat{\chapter}
+%  {\normalfont\huge\bfseries}{\thechapter.}{20pt}{\huge}
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+
+\newcommand{\changeurlcolor}[1]{\hypersetup{urlcolor=#1}}
+
+\lhead{\matiere}
+\chead{\quelrapport}
+\rhead{\href{http://enssat.fr}{\includegraphics[scale=0.05]{images/logo_ecole.png}}}
+
+\setlength{\footskip}{20pt} % Bas de page + séparation
+\setlength{\parskip}{0.3em}
+
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%chiffre romains avant le contenu...
+\makeatletter
+
+\newif\if@mainmatter \@mainmattertrue
+
+\newcommand\frontmatter{%
+    \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{roman}}
+\newcommand\mainmatter{%
+    \cleardoublepage
+  \@mainmattertrue
+  \pagenumbering{arabic}}
+\makeatother

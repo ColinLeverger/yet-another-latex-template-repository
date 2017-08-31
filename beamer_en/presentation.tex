@@ -1,0 +1,178 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage{pslatex}
+\usepackage{verbatim}%multiline comments
+\usepackage{listings}%code format
+\usepackage[frenchb]{babel}%langue
+
+\input{./params.tex}
+
+\title{Présentation avec LaTeX}
+\subtitle{Une présentation\\
+      \&\\
+      Un certain style}
+\author[Colin \textsc{Leverger}]{Colin \textsc{Leverger}\\[0.2cm] \footnotesize Tuteur : Jean-Claude \textsc{Convenant}\\Maître d'apprentissage : John \textsc{Doe}}
+\institute{ENSSAT Informatique, Multimédia et Réseaux \\
+        \emph{Promotion 2017}}
+\date{\today}
+\subject{Présentation stylée}
+\logo{\includegraphics[width=2cm]{./images/logo_ecole.png}}
+
+\begin{document}
+
+{
+\begin{frame}[plain]
+
+\begin{figure}
+  \begin{minipage}[c]{.46\linewidth}
+    \includegraphics[scale=0.1]{images/logo_ecole.png}  % first logo to display (school, or whatever you need...)
+  \end{minipage} \hfill
+  \begin{minipage}[c]{.46\linewidth}
+    \begin{flushright}
+      \includegraphics[scale=0.1]{images/logo_ecole.png} % second logo to display (company, or whatever you need...)
+    \end{flushright}
+  \end{minipage} \\[0.5cm]
+\end{figure}
+
+\maketitle
+
+\end{frame}
+}
+%***************************************
+\begin{frame}
+\frametitle{Table des matières}
+\begin{minipage}[t]{0.4\textwidth}
+ \vspace{0pt}
+ \tableofcontents
+\end{minipage}
+\begin{minipage}[t]{0.35\textwidth}
+ \vspace{0pt}
+ \includegraphics[scale=0.3]{images/happy.jpg}
+\end{minipage}
+\end{frame}
+
+\section{Le premier test}
+
+\subsection{Pourquoi pas ?}
+\begin{frame}
+\begin{itemize}
+	\item Test
+	\item Test2
+	\item Test3
+\end{itemize}
+\end{frame}
+
+\subsection{Parceque !}
+\begin{frame}
+\begin{alertblock}{Problème \& constat}
+Sans optimisation, le fichier pèse tout de même \alert{50MO}.
+\end{alertblock}
+
+\pause
+
+\begin{solution}{Solution}
+Optimiser l'export en regroupant les librairies.
+\end{solution}
+\end{frame}
+
+\section{Le deuxième test}
+\subsection{Pourquoi pas pas ?}
+\begin{frame}
+\begin{itemize}
+	\item Test
+	\item Test2
+	\item Test3
+\end{itemize}
+\end{frame}
+
+
+%***************************************
+\subsection{Parceque que !}
+
+\begin{frame}
+\frametitle{Pourquoi tester ?}
+
+\begin{itemize}
+ \item L'écriture des tests = écriture du cahier des spécifications.\pause
+ \item Tester permet d'assurer la maintenabilité du logiciel.\pause
+ \item Bonne pratique pour le travail en équipe.\pause
+ \item Jenkins en bout de chaîne.\pause
+\end{itemize}
+
+\begin{block}{Remarque}
+Ecrire les tests avant le code est une bonne pratique pour travailler en mode \emph{DevOps}.
+\end{block}
+
+\end{frame}
+%***************************************
+
+\section{Le dernier test}
+
+\subsection{Section Magique}
+\begin{frame}
+\frametitle{Magique}
+
+\underline{La magie est} :
+\begin{itemize}
+ \item Utilisé par les magiciens. \pause
+ \item Plutôt stylée. \pause
+ \item \og Vraiment \ldots COOL !\ldots \fg{}
+\end{itemize}
+
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+\frametitle{Conclusion}
+
+Vraiment cool ce template.
+
+
+\end{frame}
+
+\begin{comment}
+\begin{frame}
+\frametitle{Two-column slide}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+This is a text in first column.
+$$E=mc^2$$
+\begin{itemize}
+\item First item
+\item Second item
+\end{itemize}
+
+\column{0.5\textwidth}
+This text will be in the second column
+and on a second tought this is a nice looking
+layout in some cases.
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sample frame title}
+
+In this slide, some important text will be
+\alert{highlighted} beause it's important.
+Please, don't abuse it.
+
+\begin{block}{Remark}
+Sample text
+\end{block}
+
+\begin{alertblock}{Important theorem}
+Sample text in red box
+\end{alertblock}
+
+\begin{examples}
+Sample text in green box. "Examples" is fixed as block title.
+\end{examples}
+\end{frame}
+\end{comment}
+
+
+\end{document}

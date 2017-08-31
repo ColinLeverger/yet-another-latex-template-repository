@@ -1,0 +1,143 @@
+\definecolor{myred}{rgb}{0.63,0,0}
+\definecolor{mygreen}{rgb}{0, 0.36, 0}
+\usetheme{Ilmenau}
+\usecolortheme{beaver}
+%\setbeamertemplate{itemize items}[square]
+%\setbeamercolor{itemize items}{bg=myred}
+\setbeamertemplate{itemize item}{\color{myred}$\blacksquare$}
+\setbeamertemplate{enumerate items}[square]
+\setbeamercolor{item projected}{bg=myred!70!black,fg=white}
+\setbeamercovered{transparent}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table des matières}
+    \tableofcontents[currentsection, hideothersubsections]
+  \end{frame}
+}
+\setcounter{framenumber}{0}
+\setbeamercolor{institute in head/foot}{fg=black}
+
+\makeatletter
+%change the footline template to include frame numbers
+\defbeamertemplate*{footline}{myminiframes theme}
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+      \hfill%
+      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      {\usebeamerfont{title in head/foot}\insertshorttitle\hfill \insertframenumber/\inserttotalframenumber}%<-here
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+\makeatother
+
+\setbeamertemplate{section in toc}{%
+  {\color{myred}\inserttocsectionnumber.}~\inserttocsection}
+\setbeamertemplate{subsection in toc}{%
+  \hspace{1.2em}{\color{myred}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection\par}
+\setbeamertemplate{subsubsection in toc}{%
+  \hspace{3em}{\color{myred}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsubsection\par}
+  
+\newenvironment<>{solution}[1]{%
+  \setbeamercolor{block title}{fg=white,bg=mygreen!75!black}%
+  \begin{block}#2{#1}}{\end{block}}
+  
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{commentgreen}{rgb}{0.29, 0.6, 0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{cosmiclatte}{rgb}{1.0, 0.97, 0.91}
+\definecolor{whitesmoke}{rgb}{0.99, 0.98, 0.95}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{myyellow}{rgb}{0.76, 0.62, 0}
+
+\lstset{ %
+  backgroundcolor=\color{whitesmoke},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\tiny,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  %deletekeywords={...},            % if you want to delete keywords from the given language
+  %escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  keywordstyle=[2]\color{red},
+  keywordstyle=[3]\color{myyellow},
+  keywordstyle=[4]\color{commentgreen},
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2                   % sets default tabsize to 2 spaces
+  %title=                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+% "define" Scala
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+% "define" drool
+\lstdefinelanguage{drools}{
+  morekeywords={rule,when,then,insert,new,end},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+\colorlet{punct}{red!60!black}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    literate=
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+% "define" test
+\lstdefinelanguage{test}{
+  morekeywords={info},
+  keywords=[2]{error, FAILED, was, not, equal, to},
+  keywords=[3]{IGNORED},
+  keywords=[4]{success},
+  otherkeywords={-},
+}

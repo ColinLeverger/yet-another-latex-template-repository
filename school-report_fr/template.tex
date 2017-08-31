@@ -1,0 +1,65 @@
+\documentclass[12pt, openany]{report}
+\input{./params/params.tex}
+
+\newcommand{\quelrapport}{Projet noté}
+\newcommand{\titre}{\huge \bfseries Un super rapport école}
+\newcommand{\matiere}{Matière \& Compléments}
+\newcommand{\dest}{Destinataire : \href{mailto:some-people@some-univ.fr}{Jean-Claude CONVENANT}}
+\newcommand{\skipduhaut}{\\[7cm]}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\renewcommand{\i}{\item}
+
+\begin{document}
+\def\chaptername{Partie} % change l'intitulé du chapitre
+\input{./title.tex}
+
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\chapter*{Introduction}
+
+Superbe introduction.
+\lipsum
+
+\addcontentsline{toc}{chapter}{Introduction} % include intro dans toc
+
+\newpage
+
+\chapter{Définition du système étudié}
+
+Superbe chapitre.
+\lipsum[1]
+
+\section{Environnement}
+
+Superbe section.
+\lipsum[1]
+
+\section{Frontières}
+
+Une seconde superbe section.
+
+\begin{figure}[!h]
+  \centering
+  \fbox{
+  \includegraphics[scale=1]{images/beteacorne.png}
+  }
+  \caption{Une figure}
+  \label{fig:figure}
+\end{figure}
+
+\chapter{Conclusion}
+
+Superbe conclusion.
+\lipsum
+
+
+\newpage
+\listoffigures
+
+\end{document}

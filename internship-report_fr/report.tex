@@ -1,0 +1,41 @@
+\documentclass[12pt, twoside, openright]{report}
+\input{./params/params.tex}
+
+\newcommand{\quelrapport}{Rapport de Stage \\Projet de fin d'études}
+\newcommand{\titre}{\huge \bfseries Performances, Magie et Logiciels}
+\newcommand{\moi}{\changeurlcolor{black}\href{http://colinleverger.fr}{Colin \textsc{Leverger}}}
+\newcommand{\skipduhaut}{\\[5cm]}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\renewcommand{\i}{\item}
+
+\begin{document}
+
+\def\chaptername{Partie} %change l'intitulé du chapitre
+\frontmatter
+
+\input{./title.tex}
+
+\input{./raw-tex/remerciements.tex}
+
+\input{./raw-tex/resume.tex}
+
+\newpage
+\tableofcontents
+
+\mainmatter
+
+\input{./raw-tex/intro.tex}
+
+\input{./raw-tex/contenu.tex}
+
+\input{./raw-tex/conclusion.tex}
+
+\input{./bibli.tex}
+
+\input{./raw-tex/appendix.tex}
+
+\end{document}

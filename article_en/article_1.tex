@@ -1,0 +1,75 @@
+\documentclass[DIV=calc, paper=a4, fontsize=11pt, twocolumn]{scrartcl}	 % A4 paper and 11pt font size
+
+\input{packages.tex}
+\input{params.tex}
+\input{colors.tex}
+
+\begin{document}
+
+\maketitle % Print the title
+
+\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+% The first character should be within \initial{}
+\initial{T}\textbf{his fancy green paper will give some knowledge to the reader, luckily. It is green, and it is beautiful (I mean, in my opinion).}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+Wow, what a fancy introduction.
+\lipsum[1]
+
+\section{What is this crazy thing we are talking about?}
+
+\lipsum[2]
+
+\subsection{What about this sub thing?}
+
+\lipsum[1]
+
+\subsection{What about this other sub thing?}
+
+Something new! 
+\lipsum[1]
+
+\subsubsection{Well, it has multiple subsubsection, at least two I mean}
+
+\lipsum[1]
+
+\subsubsection{I said at least two}
+
+\lipsum[1]
+
+\section{Conclusion}
+
+That was a beautiful paper, thanks.
+\lipsum[1]
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Thing]{this:thing}
+\textsc{This Thing™}:
+\newblock \emph{This Thing™}.
+\newblock \url{http://this-thing.org/}
+
+\bibitem[Thing2]{this:thing2}
+\textsc{This Other Thing™}:
+\newblock \emph{This Other Thing™}.
+\newblock \url{http://this-other-thing.org/}
+
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
