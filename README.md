@@ -8,19 +8,19 @@ Nice LaTeX templates for university students.
 
 Green template to write sort of articles, publications, etc.
 
-See [article_en/article_1.pdf](this pdf).
+See [this pdf](/article_en/article_1.pdf).
 
 ## Article French
 
 Regular template to write an article (or a short report) in a school context.
 
-See [article_fr/article.pdf](this pdf).
+See [this pdf](/article_fr/article.pdf).
 
 ## Beamer English
 
 Clean Beamer presentation in English.
 
-See [beamer_en/presentation.pdf](this pdf).
+See [this pdf](/beamer_en/presentation.pdf).
 
 ![Beamer Style](beamer.png "Beamer")
 
@@ -29,10 +29,10 @@ See [beamer_en/presentation.pdf](this pdf).
 Two-sided template to create end of study/6 months internship report. Makefile provided for Linux.
 Built to be used with university and company logos.
 
-See [internship-report_fr/report.pdf](this pdf).
+See [this pdf](/internship-report_fr/report.pdf).
 
 ## School Report French
 
 One sided report for school.
 
-See [school-report_fr/template.pdf](this pdf).
+See [this pdf](/school-report_fr/template.pdf).
